@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const path = require('path'); // Ensure you have path imported
 
 module.exports = {
   module: {
@@ -14,7 +15,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(js|jsx)$/,
@@ -25,10 +26,14 @@ module.exports = {
       }
     ]
   },
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'main.js',
+  },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./public/index.html",
-      filename: "./index.html"
+      template: './public/index.html',
+      filename: './index.html'
     })
   ]
 };
