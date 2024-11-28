@@ -1,0 +1,149 @@
+.feed {
+  width: 100%;
+  max-width: 336px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 70%;
+  overflow-y: auto;
+  scrollbar-width: none;     /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer 10+ */
+}
+
+/* For webkit browsers (Chrome, Safari) */
+.element::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+  
+.call-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+  
+.call-item:last-child {
+  border-bottom: none;
+}
+.call-item.missed {
+  color: #ff0000;
+}
+
+.call-item.answered {
+  color: #000000;
+}
+
+.call-item.voicemail {
+  color: #4400ff;
+}
+
+.call-item.outbound {
+  background: #e7fce7;
+}
+
+.call-item.inbound {
+  background: #e7fce7;
+}
+
+.caller-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.caller-info h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.caller-info p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.call-details {
+  flex-grow: 1;
+  text-align: left; /* Ensure the text is left-aligned */
+  display: flex;
+  justify-content: flex-end; /* Aligns the icon to the right */
+  align-items: center;
+}
+
+.call-details p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.call-item p svg {
+    margin-right: 8px; /* Add space between the icon and text */
+}
+
+.archive-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 10px; /* Adds some space between the icon and the text */
+}
+
+.view-dropdown-container {
+    display: flex;
+    justify-content: flex-end; /* Align the dropdown to the right */
+    margin-bottom: 10px; /* Space between dropdown and feed content */
+    align-items: center;
+}
+  
+.view-dropdown {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #e7fce7; /* Match the background color with the feed */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Make the dropdown take up 100% of its container's width */
+}
+  
+.view-dropdown:hover {
+    background-color: #b5f7b5; /* Highlight color on hover */
+}
+
+.view-dropdown:focus {
+    outline: none;
+    border-color: #005f00; /* Highlight the border on focus */
+}
+
+.top-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+.clear-button {
+    width: 70%; /* Button takes up 65% of the container */
+    padding: 10px;
+    margin-top: -10px;
+    font-size: 1rem;
+    background-color: #e7fce7; /* Match the app's button color */
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .clear-button:hover {
+    background-color: #b5f7b5; /* Darker color on hover */
+  }
+  
+  .clear-button:focus {
+    outline: none;
+    border-color: #e7fce7;
+  }
+
+  .clear-button:active {
+    background-color: #98e198; /* Change background color when the button is clicked */
+  }
